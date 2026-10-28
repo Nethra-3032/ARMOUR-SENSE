@@ -1,0 +1,96 @@
+{
+  "model_name": "RandomForestClassifier (Ensemble Balanced)",
+  "version": "1.0.0",
+  "trained_at": "2026-10-28 14:18:55 UTC",
+  "train_size": 8000,
+  "test_size": 2000,
+  "failure_cases_train": 220,
+  "failure_cases_test": 55,
+  "accuracy": 0.9385,
+  "balanced_accuracy": 0.562,
+  "precision": 0.1047,
+  "recall": 0.1636,
+  "f1_score": 0.1277,
+  "roc_auc": 0.6909,
+  "confusion_matrix": [
+    [
+      1868,
+      77
+    ],
+    [
+      46,
+      9
+    ]
+  ],
+  "baseline_metrics": {
+    "logistic_regression": {
+      "accuracy": 0.6245,
+      "precision": 0.0409,
+      "recall": 0.5636,
+      "f1_score": 0.0763,
+      "roc_auc": 0.6254
+    },
+    "dummy_prior": {
+      "accuracy": 0.9725,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0
+    }
+  },
+  "multiclass_metrics": {
+    "failure_subset_test_size": 55,
+    "test_accuracy": 0.3818,
+    "classes": [
+      "Overstrain Failure",
+      "Power Failure",
+      "Tool Wear Failure"
+    ],
+    "test_classification_report": {
+      "Overstrain Failure": {
+        "precision": 0.625,
+        "recall": 0.5172413793103449,
+        "f1-score": 0.5660377358490566,
+        "support": 29.0
+      },
+      "Power Failure": {
+        "precision": 0.25,
+        "recall": 0.26666666666666666,
+        "f1-score": 0.25806451612903225,
+        "support": 15.0
+      },
+      "Tool Wear Failure": {
+        "precision": 0.13333333333333333,
+        "recall": 0.18181818181818182,
+        "f1-score": 0.15384615384615385,
+        "support": 11.0
+      },
+      "accuracy": 0.38181818181818183,
+      "macro avg": {
+        "precision": 0.3361111111111111,
+        "recall": 0.3219087425983978,
+        "f1-score": 0.3259828019414142,
+        "support": 55.0
+      },
+      "weighted avg": {
+        "precision": 0.4243939393939394,
+        "recall": 0.38181818181818183,
+        "f1-score": 0.3996067231611967,
+        "support": 55.0
+      }
+    }
+  },
+  "feature_names": [
+    "Type_H",
+    "Type_L",
+    "Type_M",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]",
+    "Temp_Diff",
+    "Power_Watts",
+    "Strain_Index"
+  ],
+  "class_weights_used": "balanced"
+}
